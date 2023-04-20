@@ -1,0 +1,119 @@
+:root{
+    --color-prinicipal: #000;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Times New Roman', sans-serif;
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: #C1FF72;
+}
+
+main{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header{
+    width: 100%;
+    padding-top: 0.5rem;
+}
+.header-titulo{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.header-titulo h1{
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(252, 0, 0);
+    margin: 0;
+}
+
+/* Section inicio */
+
+.seccion-inicio{
+
+}
+
+.btn{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #ddf95e;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Section cards */
+
+.seccion-cartas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100vh;
+
+}
+
+.seccion-cartas  img{
+    width: 300px;
+    height: 500px;
+    margin: 0;
+    
+}
+
+.contenedor-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-cartas{
+    min-width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.carta{
+    background-color: white;
+    padding: .8rem;
+}
+
+.carta img{
+    border: #000 solid 3px;
+}
+
+/* Ocultar Seccion  */
+
+.ocultar-section{
+    display: none;
+}
+
+.parar{
+    margin: 30px;
+    width: 15rem;
+    height: 3rem;
+    color: rgb(255, 255, 255);
+    background-color: red;
+    border-radius: .5rem;
+    font-size: 2.2rem;
+    font-family: 'Times New Roman', sans-serif;
+}
