@@ -34,12 +34,12 @@ header{
     width: 100%;
     padding-top: 0.5rem;
 }
-.header-titulo{
+.contenedor-titulo{
     width: 50%;
     margin: 0 auto;
 }
 
-.header-titulo h1{
+.contenedor-titulo h1{
     font-size: 3.5rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -116,4 +116,19 @@ header{
     border-radius: .5rem;
     font-size: 2.2rem;
     font-family: 'Times New Roman', sans-serif;
+}
+
+/* Barra de progreso */
+
+#myProgress {
+    width: 50%;
+    background-color: grey;
+    margin: 0 auto;
+}
+  
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: rgb(31, 198, 31);
+    transition: width 2s ease;
 }

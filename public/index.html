@@ -16,15 +16,19 @@
 
 </head>
 <body>
+    
     <header>
-        <div class="header-titulo">
-            <h1 class="">Lotería</h1>
+        <div class="contenedor-titulo">
+            <h1 id="titulo" class="">Lotería</h1>
         </div>
+        <div class="ocultar-section" id="myProgress">
+            <div id="myBar"></div>
+          </div>
     </header>
     <main>
         <section class="seccion-inicio">
-            <form>
-                <button class="btn" type="submit">
+            <form id="form-inicio">
+                <button id="btn-start" class="btn" type="submit">
                     Iniciar
                 </button>
             </form>
@@ -36,7 +40,7 @@
             </div>
             <div class="contenedor-principal">
                 <div class="carta">
-                    <img src="../assets/img/01-ElGallo.jpg" alt="imagen-baraja">
+                    <img src="../assets/img/carta-reverso.png" alt="imagen-baraja">
                 </div>
                 
             </div>
@@ -48,11 +52,14 @@
                     <img src="../assets/img/carta-reverso.png" alt="baraja">
                 </div>
             </div>
-            <button class="parar"> Parar</button>
+            <button type="button" class="parar ocultar-section">Parar</button>
         </section>
         <section>
             
         </section>
     </main>
+
+    <script type="module" src="../js/app.js"></script>
+    <script src="../js/cards.js"></script>
 </body>
 </html>
