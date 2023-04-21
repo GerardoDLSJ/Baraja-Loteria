@@ -64,16 +64,27 @@ function mostrarBaraja(){
 
 function detener(e){
     e.preventDefault();
-    console.log('Hola');
-    clearInterval(mostrandoBaraja);
+
+
+    if(buttonStop.textContent === 'Parar'){
+        clearInterval(mostrandoBaraja);
+        buttonStop.textContent = 'Reanudar';
+    }else{
+        buttonStop.textContent = 'Parar';
+        mostrarBaraja();
+    }
+
+
 }
 
 function actualizarProgreso() {
-    if (contador < cartasRevueltas.length) {
-      const ancho =  calcularPorcentaje();
-      barraProgreso.style.width = ancho + "%";
-      return;
-    }
+   barraProgreso.classList.add('ancho-completo');
+
+    // if (contador < cartasRevueltas.length) {
+    //   const ancho =  calcularPorcentaje();
+    //   barraProgreso.style.width = ancho + "%";
+    //   return;
+    // }
 }
 
 function calcularPorcentaje(){

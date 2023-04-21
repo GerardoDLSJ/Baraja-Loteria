@@ -21,8 +21,8 @@
         <div class="contenedor-titulo">
             <h1 id="titulo" class="">Lotería</h1>
         </div>
-        <div class="ocultar-section" id="myProgress">
-            <div id="myBar"></div>
+        <div class="ocultar-section " id="myProgress">
+            <div class="transition" id="myBar"></div>
           </div>
     </header>
     <main>
@@ -44,15 +44,16 @@
                 </div>
                 
             </div>
-            <div class="contenedor-cartas ocultar-section">
-                <div>
-                    <img src="../assets/img/04-Catrin.jpg" alt="carta-reciente">
+            <div class="contenedor-cartas">
+                <div class="carta">
+                    <img id="baraja-reciente" class="cartas-pasadas" src="../assets/img/04-Catrin.jpg" alt="carta-reciente">
                 </div>
-                <div>
-                    <img src="../assets/img/carta-reverso.png" alt="baraja">
+                <div class="carta">
+                    <img id="baraja" class="cartas-pasadas" src="../assets/img/carta-reverso.png" alt="baraja">
                 </div>
             </div>
             <button type="button" class="parar ocultar-section">Parar</button>
+            
         </section>
         <section>
             
