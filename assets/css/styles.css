@@ -1,28 +1,26 @@
-:root{
+:root {
     --color-prinicipal: #000;
 }
 
-*{
+* {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
 }
 
-
 html {
     height: 100%;
     width: 100%;
-    font-family: 'Times New Roman', sans-serif;
+    font-family: "Times New Roman", sans-serif;
 }
 
-
-body{
+body {
     min-height: 100vh;
-    background-color: #C1FF72;
+    background: linear-gradient(to top, rgba(30,35,38,.6), rgba(30,35,38,.9)), url(../img/fondo.jpg);
 }
 
-main{
-    min-height: 90vh;
+main {
+    min-height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,122 +28,191 @@ main{
 }
 
 /* Header */
-header{
+header {
     width: 100%;
     padding-top: 0.5rem;
 }
-.contenedor-titulo{
+
+.contenedor-titulo {
     width: 50%;
     margin: 0 auto;
 }
 
-.contenedor-titulo h1{
-    font-size: 3.5rem;
-    font-weight: 400;
+.contenedor-titulo h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    color: rgb(252, 0, 0);
-    margin: 0;
+    color: rgb(255, 255, 255);
+    margin: 8rem;
 }
+
 
 /* Section inicio */
-
-.seccion-inicio{
-
+.seccion-inicio {
+    display: contents;
 }
 
-.btn{
-    width: 100%;
+.btnInicial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 15rem;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: #ddf95e;
+    background-color: rgb(11, 94, 215);
+    color: #f1f1f1;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-/* Section cards */
+.btnInicial:hover{
+    background-color: rgb(1, 57, 143);
+}
 
-.seccion-cartas{
+/* Section cartas */
+.seccion-cartas {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-width: 100vh;
-
+    margin: .7rem;
 }
 
-.seccion-cartas  img{
-    width: 300px;
-    height: 500px;
+.seccion-cartas img {
+    width: 190px;
+    height: 300px;
     margin: 0;
-    
 }
 
-.contenedor-principal{
+.contenedor-principal {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.contenedor-cartas{
+.contenedor-cartas {
     min-width: 100%;
     display: flex;
     justify-content: end;
 }
 
-.carta{
+.carta {
     background-color: white;
-    padding: .8rem;
+    padding: 0.8rem;
 }
 
-.carta img{
+.carta img {
     border: #000 solid 3px;
 }
 
 /* Ocultar Seccion  */
-
-.ocultar-section{
+.ocultar-section {
     display: none;
 }
 
-.parar{
-    margin: 30px;
-    width: 15rem;
+.parar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    width: 13rem;
     height: 3rem;
+    border-radius: 1rem;
     color: rgb(255, 255, 255);
-    background-color: red;
-    border-radius: .5rem;
-    font-size: 2.2rem;
-    font-family: 'Times New Roman', sans-serif;
+    background-color: rgb(11, 94, 215);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.parar:hover{
+    background-color: rgb(1, 57, 143);
 }
 
 /* Cartas Recientes */
-.seccion-cartas .carta{
-    paddig: 0.2rem;
+.seccion-cartas .carta {
+    padding: 0.5rem;
 }
 
-.seccion-cartas .cartas-pasadas{
+.seccion-cartas .cartas-pasadas {
     width: 100px;
     height: 120px;
 }
 
 /* Barra de progreso */
-
 #myProgress {
     width: 50%;
     background-color: grey;
     margin: 0 auto;
+    border-radius: 5rem;
 }
-  
+
 #myBar {
     width: 0%;
     height: 30px;
     background-color: rgb(31, 198, 31);
+    border-radius: 5rem;
 }
 
-.transition{
+.transition {
     transition: width 3s cubic-bezier(0, 0, 0.64, 0.61);
 }
 
-.ancho-completo{
+.ancho-completo {
     width: 100% !important;
+}
+
+/* Carousel de cartas */
+.MultiCarousel {
+    float: left;
+    overflow: hidden;
+    padding-top: 15px;
+    width: 100%;
+    position: relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+    transition: 1s ease all;
+    float: left;
+    min-height: 125px;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+    float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item > div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background: #f1f1f1;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+    position: absolute;
+    border-radius: 50%;
+    top: calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+    left: 0;
+}
+
+.MultiCarousel .rightLst {
+    right: 0;
+}
+
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+    pointer-events: none;
+    background: #ccc;
+}
+
+.seccion-cartas-carousel{
+    width: 100%;
 }
