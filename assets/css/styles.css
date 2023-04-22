@@ -112,10 +112,16 @@ header {
 
 /* Ocultar Seccion  */
 .ocultar-section {
-    display: none;
+    display: none !important;
 }
 
-.parar {
+
+/* Opciones  */
+.contenedor-botones{
+    display: flex;
+}
+
+.btn-opciones {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,7 +135,7 @@ header {
     font-weight: bold;
 }
 
-.parar:hover{
+.btn-opciones:hover{
     background-color: rgb(1, 57, 143);
 }
 
@@ -167,6 +173,11 @@ header {
 }
 
 /* Carousel de cartas */
+
+.MultiCarousel-inner .item{
+    width: 130px;
+}
+
 .MultiCarousel {
     float: left;
     overflow: hidden;
