@@ -40,7 +40,7 @@ function reiniciarJuego() {
     buttonRestart.classList.add("ocultar-section");
 
     if (buttonStop.classList.contains("ocultar-section"))
-      buttonRestart.classList.remove("ocultar-section");
+      buttonStop.classList.remove("ocultar-section");
 
     buttonStop.textContent = "Pausar";
     iniciarJuego();
@@ -67,8 +67,10 @@ function mostrarSeccionCartas(e) {
   seccionCartaCarousel.classList.remove("ocultar-section");
   buttonStop.classList.remove("ocultar-section");
   contenedorProgreso.classList.remove("ocultar-section");
+
   iniciarJuego();
 }
+
 function iniciarJuego() {
   barajarCartas();
   mostrarBaraja();
@@ -88,7 +90,7 @@ function barajarCartas() {
 
 function mostrarBaraja() {
   mostrandoBaraja = setInterval(() => {
-    limpiarProceso();
+    limpiarProgreso();
     if (contador >= cartasRevueltas.length) {
       clearInterval(mostrandoBaraja);
       buttonStop.classList.add("ocultar-section");
@@ -109,7 +111,7 @@ function detener() {
     clearInterval(mostrandoBaraja);
     buttonStop.textContent = "Reanudar";
     buttonRestart.classList.remove("ocultar-section");
-    limpiarProceso();
+    limpiarProgreso();
   } else {
     buttonStop.textContent = "Pausar";
     buttonRestart.classList.add("ocultar-section");
@@ -123,7 +125,7 @@ function actualizarProgreso() {
   barraProgreso.classList.add("ancho-completo");
 }
 
-function limpiarProceso() {
+function limpiarProgreso() {
   barraProgreso.classList.remove("transition");
   barraProgreso.classList.remove("ancho-completo");
 }
