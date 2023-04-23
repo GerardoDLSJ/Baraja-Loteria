@@ -44,6 +44,7 @@ function reiniciarJuego() {
 
     buttonStop.textContent = "Pausar";
     iniciarJuego();
+    actualizarProgreso();
     return;
   }
   return;
@@ -69,6 +70,7 @@ function mostrarSeccionCartas(e) {
   contenedorProgreso.classList.remove("ocultar-section");
 
   iniciarJuego();
+  actualizarProgreso();
 }
 
 function iniciarJuego() {

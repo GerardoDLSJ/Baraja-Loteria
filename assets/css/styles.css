@@ -110,6 +110,11 @@ header {
     border: #000 solid 3px;
 }
 
+img {
+    padding: 2px;
+    border: #ffffff solid 6px;
+}
+
 /* Ocultar Seccion  */
 .ocultar-section {
     display: none !important;
@@ -200,7 +205,6 @@ header {
     text-align: center;
     padding: 10px;
     margin: 10px;
-    background: #f1f1f1;
 }
 
 .MultiCarousel .leftLst,
