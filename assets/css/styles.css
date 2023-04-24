@@ -231,3 +231,20 @@ img {
 .seccion-cartas-carousel{
     width: 100%;
 }
+
+.cuentaRegresiva{
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 200px;
+    text-align: center;
+    cursor:none;
+
+}
+
+.estiloRecuadro{
+background-color: transparent;
+}
+
+.estiloModal{
+   background: linear-gradient(to top, rgba(30,35,38,.6), rgba(30,35,38,.9));
+} 

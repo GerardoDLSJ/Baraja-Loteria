@@ -43,8 +43,8 @@ function reiniciarJuego() {
       buttonStop.classList.remove("ocultar-section");
 
     buttonStop.textContent = "Pausar";
+    llenarModal();
     iniciarJuego();
-    actualizarProgreso();
     return;
   }
   return;
@@ -68,9 +68,8 @@ function mostrarSeccionCartas(e) {
   seccionCartaCarousel.classList.remove("ocultar-section");
   buttonStop.classList.remove("ocultar-section");
   contenedorProgreso.classList.remove("ocultar-section");
-
+  llenarModal();
   iniciarJuego();
-  actualizarProgreso();
 }
 
 function iniciarJuego() {
@@ -102,7 +101,9 @@ function mostrarBaraja() {
     let carta = cartasRevueltas[contador];
     decirCarta(carta.nombre);
     cartaPrincipal.src = carta.urlImagen;
-    addImageCarousel(carta.urlImagen, carta.nombre);
+    if(contador!= 0){
+      addImageCarousel(cartasRevueltas[contador-1].urlImagen, cartasRevueltas[contador-1].nombre);
+    }
     contador++;
     actualizarProgreso();
   }, 3000);
@@ -254,4 +255,28 @@ function click(ell, ee) {
   var Parent = "#" + $(ee).parent().attr("id");
   var slide = $(Parent).attr("data-slide");
   ResCarousel(ell, Parent, slide);
+}
+
+
+function llenarModal()
+{
+    let contenido;
+    let cuenta =3;
+    var modal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+        keyboard: true
+      })
+    modal.show();
+    let modalContenido=document.getElementById("modalContenido");
+    modalContenido.innerHTML=cuenta
+    cuenta--;
+    contenido = setInterval(() => {
+        console.log(cuenta)
+        if (cuenta == 0) {
+            clearInterval(contenido);
+            modal.hide();
+            return;
+        }
+        modalContenido.innerHTML=cuenta
+        cuenta--;
+    }, 1000);
 }
