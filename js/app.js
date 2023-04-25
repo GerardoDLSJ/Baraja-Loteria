@@ -101,8 +101,11 @@ function mostrarBaraja() {
     let carta = cartasRevueltas[contador];
     decirCarta(carta.nombre);
     cartaPrincipal.src = carta.urlImagen;
-    if(contador!= 0){
-      addImageCarousel(cartasRevueltas[contador-1].urlImagen, cartasRevueltas[contador-1].nombre);
+    if (contador != 0) {
+      addImageCarousel(
+        cartasRevueltas[contador - 1].urlImagen,
+        cartasRevueltas[contador - 1].nombre
+      );
     }
     contador++;
     actualizarProgreso();
@@ -257,26 +260,24 @@ function click(ell, ee) {
   ResCarousel(ell, Parent, slide);
 }
 
-
-function llenarModal()
-{
-    let contenido;
-    let cuenta =3;
-    var modal = new bootstrap.Modal(document.getElementById('exampleModal'), {
-        keyboard: true
-      })
-    modal.show();
-    let modalContenido=document.getElementById("modalContenido");
-    modalContenido.innerHTML=cuenta
+function llenarModal() {
+  let contenido;
+  let cuenta = 3;
+  var modal = new bootstrap.Modal(document.getElementById("exampleModal"), {
+    keyboard: true,
+  });
+  modal.show();
+  let modalContenido = document.getElementById("modalContenido");
+  modalContenido.innerHTML = cuenta;
+  cuenta--;
+  contenido = setInterval(() => {
+    console.log(cuenta);
+    if (cuenta == 0) {
+      clearInterval(contenido);
+      modal.hide();
+      return;
+    }
+    modalContenido.innerHTML = cuenta;
     cuenta--;
-    contenido = setInterval(() => {
-        console.log(cuenta)
-        if (cuenta == 0) {
-            clearInterval(contenido);
-            modal.hide();
-            return;
-        }
-        modalContenido.innerHTML=cuenta
-        cuenta--;
-    }, 1000);
+  }, 1000);
 }
